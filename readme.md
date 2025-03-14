@@ -178,7 +178,7 @@ ProyectoPHP2025/
     sudo systemctl restart apache2
     ```
 11. **Probar sitio web**
-    Accedemos mediante (http://ip publica asignada)
+    --Accedemos mediante (http://ip publica asignada)
 
 ## Contacto
 Proyecto mantenido por AFP Services
