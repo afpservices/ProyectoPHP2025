@@ -7,13 +7,48 @@ Aplicación web desarrollada en PHP para gestión de productos y usuarios, sigui
 ```
 ProyectoPHP2025/
 │
+├── assets/              # Recursos estáticos
+│   ├── css/             # Hojas de estilo
+│   └── img/             # Imágenes
+│
 ├── Controllers/         # Controladores de la aplicación
+│   ├── AdminController.php
+│   ├── CartController.php
+│   ├── OrderController.php
+│   └── ProductsController.php
+│
+├── db/                  # Configuración de base de datos
+│   └── Database.php
+│
 ├── Models/              # Modelos de datos
-├── Views/               # Vistas y plantillas
-├── assets/              # Recursos estáticos (CSS, JS, imágenes)
-├── db/                  # Archivos relacionados con la base de datos
-├── index.php            # Punto de entrada de la aplicación
-└── Base de datos.txt    # Documentación de la base de datos
+│   ├── Carrito.php
+│   ├── Funciones.php
+│   └── Producto.php
+│
+├── Views/               # Vistas del proyecto
+│   ├── admin/           # Vistas de administración
+│   │   ├── create_product.php
+│   │   ├── edit_product.php
+│   │   ├── login.php
+│   │   └── panel.php
+│   │
+│   ├── cart/            # Vistas del carrito
+│   │   └── index.php
+│   │
+│   ├── orders/          # Vistas de pedidos
+│   │   ├── checkout.php
+│   │   └── confirmation.php
+│   │
+│   ├── products/        # Vistas de productos
+│   │   ├── index.php
+│   │   ├── search.php
+│   │   └── show.php
+│   │
+│   └── templates/       # Plantillas comunes
+│       ├── footer.php
+│       └── header.php
+│
+└── index.php            # Punto de entrada de la aplicación
 ```
 
 ## Requisitos del Sistema
