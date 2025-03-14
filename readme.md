@@ -1,7 +1,7 @@
 # ProyectoPHP2025
 
 ## Descripción del Proyecto
-Aplicación web desarrollada en PHP para gestión de productos y usuarios, siguiendo una arquitectura MVC (Modelo-Vista-Controlador).
+En este proyecto hemos implementado PHP junto con una arquitectura MVC (Modelo-Vista-Controlador), en el cual hemos desarrollado una pagina basada en informatica en la cual le hemos implementado una gran variedad de funciones bastante utiles para la base de una pagina web funcional 
 
 ## Estructura del Proyecto
 ```
