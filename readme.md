@@ -174,12 +174,14 @@ ProyectoPHP2025/
    ```
 
 10. **Habilitar Sitio y Reiniciar Servidor**
+     ```
     sudo a2ensite proyectophp
     sudo systemctl restart apache2
     ```
-11. **Probar sitio web**
+12. **Probar sitio web**
+ ```
     --Accedemos mediante (http://ip publica asignada)
-
+ ```
 ## Contacto
 Proyecto mantenido por AFP Services
 - GitHub: [@afpservices](https://github.com/afpservices)
