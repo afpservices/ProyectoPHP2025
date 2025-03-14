@@ -32,7 +32,9 @@ ProyectoPHP2025/
 - **Administrador**
   - Usuario: admin
   - Contraseña: admin
-
+- **cliente**
+  - Usuario: felipe
+  - Contraseña: felipe
 ## Características Principales
 - Autenticación de usuarios
 - Gestión de productos
@@ -46,29 +48,7 @@ ProyectoPHP2025/
 - CSS3
 - JavaScript
 
-## Instalación
-```bash
-# Clonar el repositorio
-git clone https://github.com/afpservices/ProyectoPHP2025.git
 
-# Configurar permisos
-chmod -R 755 ProyectoPHP2025
-```
-
-## Contribución
-1. Hacer fork del repositorio
-2. Crear rama de feature (`git checkout -b feature/NuevaCaracteristica`)
-3. Commit de cambios (`git commit -m 'Añadir nueva característica'`)
-4. Push a la rama (`git push origin feature/NuevaCaracteristica`)
-5. Abrir un Pull Request
-
-## Problemas Comunes
-- Verificar permisos de archivos
-- Comprobar configuración de conexión a base de datos
-- Asegurar que todas las dependencias estén instaladas
-
-## Licencia
-Proyecto de código abierto. 
 
 ## Contacto
 Proyecto mantenido por AFP Services
