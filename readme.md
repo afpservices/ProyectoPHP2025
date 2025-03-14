@@ -44,7 +44,7 @@ ProyectoPHP2025/
 │   │   ├── search.php
 │   │   └── show.php
 │   │
-│   └── templates/       # Plantillas comunes
+│   └── templates/       # Plantillas
 │       ├── footer.php
 │       └── header.php
 │
