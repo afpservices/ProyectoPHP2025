@@ -86,10 +86,10 @@ ProyectoPHP2025/
 ### Pasos para Implementación en AWS
 
 1. **Crear Instancia EC2**
-   1. Iniciar sesión en la consola de AWS
-   2. Navegar a EC2 > Lanzar nueva instancia
-   3. Seleccionar Amazon Linux 2 o Ubuntu Server
-   4. Elegir tipo de instancia (t2.micro para pruebas)
+   1. Iniciamos sesión en la consola de AWS
+   2. Navegamos a EC2 > Lanzar nueva instancia
+   3. Seleccionar Ubuntu Server
+   4. Elegir tipo de instancia (t2.micro)
    5. Configurar grupo de seguridad:
       * Permitir tráfico HTTP (puerto 80)
       * Permitir tráfico HTTPS (puerto 443)
@@ -98,28 +98,18 @@ ProyectoPHP2025/
 2. **Conexión a la Instancia**
    ```bash
    # Conectar usando SSH
-   ssh -i "tu-clave-privada.pem" ec2-user@tu-ip-publica
-   # o para Ubuntu
-   ssh -i "tu-clave-privada.pem" ubuntu@tu-ip-publica
+   ssh -i "archivo.pem" ec2-user@la ip publica que te asigne
+  
    ```
 
 3. **Instalación de Paquetes**
    ```bash
-   # Para Amazon Linux
-   sudo yum update -y
-   sudo yum install -y httpd php php-mysql mariadb-server
-   
-   # Para Ubuntu
    sudo apt update
    sudo apt install -y apache2 php libapache2-mod-php php-mysql mysql-server
    ```
 
 4. **Configurar Servidor Web**
    ```bash
-   # Amazon Linux
-   sudo systemctl start httpd
-   sudo systemctl enable httpd
-   
    # Ubuntu
    sudo systemctl start apache2
    sudo systemctl enable apache2
@@ -137,20 +127,18 @@ ProyectoPHP2025/
    # Crear base de datos
    mysql -u root -p
    CREATE DATABASE proyectophp;
-   CREATE USER 'tu_usuario'@'localhost' IDENTIFIED BY 'tu_contraseña';
-   GRANT ALL PRIVILEGES ON proyectophp.* TO 'tu_usuario'@'localhost';
+   CREATE USER 'root'@'localhost' IDENTIFIED BY '1234';
+   GRANT ALL PRIVILEGES ON proyectophp.* TO 'root'@'localhost';
    FLUSH PRIVILEGES;
    EXIT;
    ```
 
 6. **Clonar Repositorio**
    ```bash
-   # Instalar Git
-   sudo yum install git  # Amazon Linux
-   # o
+   #Instalamos git
    sudo apt install git  # Ubuntu
    
-   # Clonar repositorio
+   # Clonamos el repositorio
    git clone https://github.com/afpservices/ProyectoPHP2025.git
    ```
 
@@ -158,32 +146,14 @@ ProyectoPHP2025/
    ```bash
    # Mover proyecto al directorio web
    sudo mv ProyectoPHP2025 /var/www/html/
-   
-   # Configurar permisos
-   sudo chown -R apache:apache /var/www/html/ProyectoPHP2025  # Amazon Linux
-   # o
+  
    sudo chown -R www-data:www-data /var/www/html/ProyectoPHP2025  # Ubuntu
    
    sudo chmod -R 755 /var/www/html/ProyectoPHP2025
    ```
 
-8. **Configurar Archivo .env**
+8. **Configurar Apache**
    ```bash
-   # Crear o editar archivo de configuración
-   nano /var/www/html/ProyectoPHP2025/.env
-   
-   # Contenido de ejemplo:
-   DB_HOST=localhost
-   DB_NAME=proyectophp
-   DB_USER=tu_usuario
-   DB_PASS=tu_contraseña
-   ```
-
-9. **Configurar Apache (archivo de host virtual)**
-   ```bash
-   # Amazon Linux
-   sudo nano /etc/httpd/conf.d/proyectophp.conf
-   
    # Ubuntu
    sudo nano /etc/apache2/sites-available/proyectophp.conf
    
@@ -191,7 +161,6 @@ ProyectoPHP2025/
    <VirtualHost *:80>
        ServerAdmin webmaster@ejemplo.com
        DocumentRoot /var/www/html/ProyectoPHP2025
-       ServerName tu-dominio.com
        
        <Directory /var/www/html/ProyectoPHP2025>
            Options Indexes FollowSymLinks
@@ -205,14 +174,11 @@ ProyectoPHP2025/
    ```
 
 10. **Habilitar Sitio y Reiniciar Servidor**
-    ```bash
-    # Amazon Linux
-    sudo systemctl restart httpd
-    
-    # Ubuntu
     sudo a2ensite proyectophp
     sudo systemctl restart apache2
     ```
+11. **Probar sitio web**
+    Accedemos mediante (http://ip publica asignada)
 
 ## Contacto
 Proyecto mantenido por AFP Services
