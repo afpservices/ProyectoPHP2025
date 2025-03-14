@@ -94,7 +94,7 @@ ProyectoPHP2025/
       * Permitir tráfico HTTP (puerto 80)
       * Permitir tráfico HTTPS (puerto 443)
       * Permitir acceso SSH (puerto 22)
-2. **Asignar IP Elástica**
+2. **Asignar IP Elástica (44.213.227.209)**
 
  1. Abrir la consola de AWS y navegar a EC2
    2. En el panel de navegación izquierdo, seleccionar "Direcciones IP elásticas"
