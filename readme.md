@@ -74,7 +74,6 @@ ProyectoPHP2025/
 - Autenticación de usuarios
 - Gestión de productos
 - Panel de administración
-- Interfaz responsive
 
 ## Tecnologías Utilizadas
 - PHP
