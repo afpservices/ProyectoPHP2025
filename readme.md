@@ -94,6 +94,17 @@ ProyectoPHP2025/
       * Permitir tráfico HTTP (puerto 80)
       * Permitir tráfico HTTPS (puerto 443)
       * Permitir acceso SSH (puerto 22)
+2. **Asignar IP Elástica**
+
+ 1. Abrir la consola de AWS y navegar a EC2
+   2. En el panel de navegación izquierdo, seleccionar "Direcciones IP elásticas"
+   3. Hacer clic en "Asignar dirección IP elástica"
+   4. Seleccionar "Amazon VPC" como ámbito de red
+   5. Hacer clic en "Asignar"
+   6. Seleccionar la dirección IP elástica recién creada
+   7. Hacer clic en "Acciones" > "Asociar dirección IP elástica"
+   8. Seleccionar la instancia EC2 creada anteriormente
+   9. Hacer clic en "Asociar"
 
 2. **Conexión a la Instancia**
    ```bash
